@@ -22,10 +22,14 @@ describe("Verify the functionality of checkbox",()=>{
         cy.get('[value="yellow"]').click().should('not.be.checked')
 
     })
-    it.only('TC03 check the multiple checkboxes at ones', () => {
+    it('TC03 check the multiple checkboxes AT A TIME', () => {
         cy.get('[name="color"]').each((el, i) => {                          //jquery
             cy.wrap(el).click().should('be.checked')
         })
         cy.get('[value="orange"]').uncheck().should('not.be.checked')
+    })
+    // or
+    it.only('TC04 check the multiple checkboxes at ones', () => {
+        cy.get('[name="color"]').check(['red','yellow','blue','orange','green','purple']).should('be.checked')
     })
 })
