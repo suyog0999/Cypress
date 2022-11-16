@@ -41,8 +41,7 @@ describe('Traverse methods in cypress',()=>{
     //not
     it('To remove DOM element(s) from the set of elements, use the .not() command.',()=>{
         cy.visit('https://webdriveruniversity.com/Data-Table/index.html')
-       cy.get('.btn-group.btn-group-toggle').children()//4
-       .not('.active').should('have.length',3)
+       cy.get('.btn-group.btn-group-toggle').children().not('.active').should('have.length',3)
     })
 
 
