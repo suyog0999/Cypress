@@ -1,10 +1,9 @@
 
-
 import data from "../../fixtures/contactus1.js"
 
-data.forEach((el, index) => {
-    console.log(el)
-})
+// data.forEach((el, index) => {
+//     console.log(el)
+// })
 
 describe('Contact_Us using fixture file export', () => {
     data.forEach((el, index) => {
